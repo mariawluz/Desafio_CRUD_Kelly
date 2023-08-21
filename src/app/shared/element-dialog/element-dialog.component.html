@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Cadastrar Empresa</h1>
+<h1 mat-dialog-title>Editar Empresa</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>CNPJ</mat-label>
+    <input matInput [(ngModel)]="data.cnpj">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Nome Fantasia</mat-label>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>CEP</mat-label>
+    <input matInput [(ngModel)]="data.cep">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Salvar</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Editar</button>
+</div>
